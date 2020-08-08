@@ -61,3 +61,73 @@ THPercentage=$((($TH*100)/$totalNumberOfFliping2))
 echo "THPercentage:$THPercentage"
 TTPercentage=$((($TT*100)/$totalNumberOfFliping2))
 echo "TTPercentage:$TTPercentage"
+
+HHH=0
+HHT=0
+HTH=0
+THH=0
+HTT=0
+THT=0
+TTH=0
+TTT=0
+k=0
+third=0
+declare -A dict2
+while [ $third -lt 200 ]
+do
+   randomCheck=$((RANDOM%8))
+   if [ $randomCheck -eq 0 ]
+   then
+      ((HHH++))
+        dict2[ "$k" ]="HHH"
+   elif [ $randomCheck -eq 1 ]
+   then
+      ((HHT++))
+      dict2[ "$k" ]="HHT"
+   elif [ $randomCheck -eq 2 ]
+   then
+      ((HTH++))
+       dict2[ "$k" ]="HTH"
+   elif [ $randomCheck -eq 3 ]
+        then
+      ((THH++))
+       dict2[ "$k" ]="THH"
+        elif [ $randomCheck -eq 4 ]
+   then
+      ((HTT++))
+       dict2[ "$k" ]="HTT"
+        elif [ $randomCheck -eq 5 ]
+   then
+      ((THT++))
+       dict2[ "$k" ]="THT"
+        elif [ $randomCheck -eq 6 ]
+   then
+      ((TTH++))
+       dict2[ "$k" ]="TTH"
+        else
+                ((TTT++))
+         dict2[ "$k" ]="TTT"
+   fi
+((k++))
+((third++))
+done
+totalNumberOfFliping3=${#dict2[@]}
+echo "Flipping in triplet: $totalNumberOfFliping3 HHH:$HHH HHT:$HHT HTH:$HTH THH:$THH HTT:$HTT THT:$THT TTH:$TTH TTT:$TTT "
+HHHPercentage=$((($HHH*100)/$totalNumberOfFliping3))
+echo "HHHPercentage:$HHHPercentage"
+HHTPercentage=$((($HHT*100)/$totalNumberOfFliping3))
+echo "HHTPercentage:$HHTPercentage"
+HTHPercentage=$((($HTH*100)/$totalNumberOfFliping3))
+echo "HTHPercentage:$HTHPercentage"
+THHPercentage=$((($THH*100)/$totalNumberOfFliping3))
+echo "THHPercentage:$THHPercentage"
+HTTPercentage=$((($HTT*100)/$totalNumberOfFliping3))
+echo "HTTPercentage:$HTTPercentage"
+THTPercentage=$((($THT*100)/$totalNumberOfFliping3))
+echo "THTPercentage:$THTPercentage"
+THTPercentage=$((($THT*100)/$totalNumberOfFliping3))
+echo "THTPercentage:$THTPercentage"
+TTHPercentage=$((($TTH*100)/$totalNumberOfFliping3))
+echo "TTHPercentage:$TTHPercentage"
+TTTPercentage=$((($TTT*100)/$totalNumberOfFliping3))
+echo "TTTPercentage:$TTTPercentage"
