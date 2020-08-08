@@ -15,3 +15,9 @@ do
    fi
 ((i++))
 done
+totalNumberOfFliping=$i
+echo "Flipping Coin in singlet: $totalNumberOfFliping Heads:$H Tails:$Tails "
+HeadsPercentage=$((($Heads*100)/$totalNumberOfFliping))
+echo "HeadsPercentage:$HeadsPercentage"
+TailsPercentage=$((($Tails*100)/$totalNumberOfFliping))
+echo "TailsPercentage:$TailsPercentage"
