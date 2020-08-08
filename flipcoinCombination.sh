@@ -21,6 +21,8 @@ HeadsPercentage=$((($Heads*100)/$totalNumberOfFliping))
 echo "HeadsPercentage:$HeadsPercentage"
 TailsPercentage=$((($Tails*100)/$totalNumberOfFliping))
 echo "TailsPercentage:$TailsPercentage"
+echo "${dict[@]}"
+printf '%s\n' "${dict[@]}" | sort | uniq -c | sort -nr | head -1
 
 HH=0
 HT=0
@@ -61,6 +63,8 @@ THPercentage=$((($TH*100)/$totalNumberOfFliping2))
 echo "THPercentage:$THPercentage"
 TTPercentage=$((($TT*100)/$totalNumberOfFliping2))
 echo "TTPercentage:$TTPercentage"
+printf '%s\n' "${dict1[@]}" | sort | uniq -c | sort -nr | head -1
+echo "${dict1[@]}"
 
 HHH=0
 HHT=0
@@ -131,3 +135,5 @@ TTHPercentage=$((($TTH*100)/$totalNumberOfFliping3))
 echo "TTHPercentage:$TTHPercentage"
 TTTPercentage=$((($TTT*100)/$totalNumberOfFliping3))
 echo "TTTPercentage:$TTTPercentage"
+printf '%s\n' "${dict2[@]}" | sort | uniq -c | sort -nr | head -1
+echo "${dict2[@]}"
